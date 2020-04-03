@@ -1,51 +1,117 @@
 <!DOCTYPE html>
+
 <head>
     <title>Zoom WebSDK</title>
     <meta charset="utf-8" />
-    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/1.7.2/css/bootstrap.css"/>
-    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/1.7.2/css/react-select.css"/>
+    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/1.7.2/css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/1.7.2/css/react-select.css" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
+
 <body>
-<style>
-    body {
-        padding-top: 50px;
-    }
-</style>
+    <style>
+        body {
+            padding-top: 50px;
+        }
+    </style>
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
 
-<nav id="nav-tool" class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">MyMeetingApp</a>
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+
+    <nav id="nav-tool" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">EDebate</a>
+            </div>
+            <div id="navbar">
+                <form class="navbar-form navbar-right" id="meeting_form">
+                    <div class="form-group">
+                        <input type="text" name="display_name" id="display_name" placeholder="Enter Your Name"
+                            class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="meeting_number" id="meeting_number" value=""
+                            placeholder="Meeting Number" class="form-control" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="join_meeting">Join</button>
+                    <button type="submit" class="btn btn-primary dropdown" id="join_meeting">Vote
+
+                        <div class="dropdown-content" style="height: 200px; width: 150px">
+                            <span style="color: black; ">
+                                Vote
+                            </span>
+
+
+                        </div>
+                    </button>
+                    <button type="submit" class="btn btn-primary dropdown" id="join_meeting">Lobby Chat
+                        <div class="dropdown-content" style="height: 300px; width: 250px">
+                            <span style="color: black">
+                                Lobby Chat
+                            </span>
+                    </button>
+                    <button type="submit" class="btn btn-primary dropdown" id="join_meeting">NotePad
+                        <div class="dropdown-content" style="height: 200px; width: 150px">
+                            <span style="color: black">
+                                NotePad
+                            </span>
+                    </button>
+                    <button type="submit" class="btn btn-primary dropdown" id="join_meeting">Chat Bot
+                        <div class="dropdown-content" style="height: 200px; width: 150px">
+                            <span style="color: black">
+                                Chat Bot
+                            </span>
+                    </button>
+                    <button type="submit" class="btn btn-primary dropdown" id="join_meeting">Add a Chit
+                        <div class="dropdown-content" style="height: 200px; width: 150px">
+                            <span style="color: black">
+                                Add a Chit
+                            </span>
+                    </button>
+
+
+
+
+
+                </form>
+            </div>
+            <!--/.navbar-collapse -->
         </div>
-        <div id="navbar">
-            <form class="navbar-form navbar-right" id="meeting_form">
-                <div class="form-group">
-                    <input type="text" name="display_name" id="display_name" value="WebSDK1.7.2#CDN" placeholder="Name" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="meeting_number" id="meeting_number" value="" placeholder="Meeting Number" class="form-control" required>
-                </div>
-                <button type="submit" class="btn btn-primary" id="join_meeting">Join</button>
-            </form>
-        </div><!--/.navbar-collapse -->
-    </div>
-</nav>
+    </nav>
 
 
-<script src="https://source.zoom.us/1.7.2/lib/vendor/react.min.js"></script>
-<script src="https://source.zoom.us/1.7.2/lib/vendor/react-dom.min.js"></script>
-<script src="https://source.zoom.us/1.7.2/lib/vendor/redux.min.js"></script>
-<script src="https://source.zoom.us/1.7.2/lib/vendor/redux-thunk.min.js"></script>
-<script src="https://source.zoom.us/1.7.2/lib/vendor/jquery.min.js"></script>
-<script src="https://source.zoom.us/1.7.2/lib/vendor/lodash.min.js"></script>
+    <script src="https://source.zoom.us/1.7.2/lib/vendor/react.min.js"></script>
+    <script src="https://source.zoom.us/1.7.2/lib/vendor/react-dom.min.js"></script>
+    <script src="https://source.zoom.us/1.7.2/lib/vendor/redux.min.js"></script>
+    <script src="https://source.zoom.us/1.7.2/lib/vendor/redux-thunk.min.js"></script>
+    <script src="https://source.zoom.us/1.7.2/lib/vendor/jquery.min.js"></script>
+    <script src="https://source.zoom.us/1.7.2/lib/vendor/lodash.min.js"></script>
 
-<script src="https://source.zoom.us/zoom-meeting-1.7.2.min.js"></script>
-<script src="js/index.js"></script>
+    <script src="https://source.zoom.us/zoom-meeting-1.7.2.min.js"></script>
+    <script src="js/index.js"></script>
 
-<script>
-   
-</script>
+    <script>
+
+    </script>
 </body>
+
 </html>
